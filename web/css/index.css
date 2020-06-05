@@ -1,0 +1,434 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+:root {
+    --mainBgColor: rgb(250, 250, 250);
+    --levelBottom: 0;
+    --levelMid: 1;
+    --levelTop: 2;
+    --levelFloat: 3;
+}
+
+html {
+    background-color: var(--mainBgColor) !important;
+}
+
+.navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.navbar-brand > .navbar-item > .title {
+    font-family: monospace !important;
+}
+
+.navbar-menu {
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    margin: auto 10px;
+    font-family: monospace !important;
+}
+
+.navbar-end > .button {
+    margin: 0 5px;
+    font-family: monospace;
+}
+
+.masterContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-family: monospace !important;
+}
+
+.block1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    /*height: 100%;*/
+    min-height: 100vh;
+}
+
+.block1 > .hero {
+    margin: 10px;
+    margin-right: 0;
+}
+
+.block1 > .hero > .hero-body{
+    padding: 0 !important;
+    margin: 0 auto;
+}
+
+.imgName {
+    padding: 5px;
+    background-color: rgba(139, 195, 74, 1);
+    border-radius: 0 0 5px 5px;
+    margin: 0 0 5px 10px !important;
+    text-align: center;
+}
+
+.interestingPatchesContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 10px;
+    margin-top: 10px;
+}
+
+.interestingPatchesContainer > p {
+    padding: 10px;
+    margin-right: 10px;
+    background-color: rgba(139, 195, 74, 0.5);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.interestingPatchesContainer > p:hover {
+    background-color: rgba(139, 195, 74, 0.8);
+}
+
+.block2 {
+    display: none;
+    position: fixed;
+    right: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 10px;
+    background-color: white;
+    z-index: 2;
+    overflow-y: auto;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    resize: horizontal;
+    width: 235px;
+    min-width: 235px;
+    height: 80vh;
+    direction: rtl;
+    border-radius: 0 5px 5px 5px;
+    -webkit-transition-timing-function: ease-in-out;
+         -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition: right 0.1s;
+    -o-transition: right 0.1s;
+    transition: right 0.1s;
+}
+
+.block2 > .hero {
+    padding: 0 0 10px 10px;
+}
+
+.expand {
+    margin-top: -10px;
+    position: fixed;
+    margin-left: -80px;
+    padding: 10px 25px 0 10px;
+    background-color: rgba(139, 195, 74, 0.5);
+    cursor: pointer;
+}
+
+.patchCompareHeader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    direction: ltr;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: white;
+    padding: 10px;
+}
+
+.fileSelectorMasterContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.fileSelectorContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.fileInputContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.secondaryFile {
+    display: none !important;
+}
+
+.fileSelectorContainer1 > .wrapper{
+    position: relative;
+}
+
+.fileSelectorContainer > div {
+    margin: 5px;
+}
+
+#canvas1, #canvas2 {
+    margin: 5px;
+    position: absolute;
+}
+
+.floatingTab {
+    display: none;
+    position: fixed;
+    background-color: white;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    border-radius: 5px;
+    padding: 10px;
+    pointer-events: none;
+    -webkit-transition-timing-function: ease-in-out;
+         -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition: left 0.1s, top 0.1s;
+    -o-transition: left 0.1s, top 0.1s;
+    transition: left 0.1s, top 0.1s;
+}
+
+.floatingTab .infoLabel {
+    font-weight: bold;
+}
+
+.floatingTab1 {
+    border: 2px solid rgba(0, 0, 255, 0.5);
+}
+
+.floatingTab2 {
+    border: 2px solid rgba(255, 0, 0, 0.5);
+}
+
+.floatingTab > .divEar {
+    display: none;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 2px);
+        -ms-transform: translate(-50%, 2px);
+            transform: translate(-50%, 2px);
+    fill: white;
+    stroke: rgba(0, 0, 255, 0.5);
+    stroke-width: 0;
+}
+
+.patchWindow {
+    display: none;
+    position: fixed;
+    border: 2px black solid;
+    pointer-events: none;
+}
+
+.toast {
+    display: none;
+    position: absolute;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 3px;
+    -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+    bottom: 50px;
+    left: 50px;
+    color: white;
+    font-size: 1.2rem;
+    z-index: 100;
+}
+
+.interestingPointsContainer {
+    pointer-events: none;
+}
+
+.interestingPointSvg {
+    width: 25px;
+    height: 25px;
+    position: fixed;
+    pointer-events: visibleFill;
+    -webkit-transform: translate(-12.5px, -12.5px);
+        -ms-transform: translate(-12.5px, -12.5px);
+            transform: translate(-12.5px, -12.5px);
+}
+
+.progressbarContainer{
+    display: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.progressbarContainer > .progress {
+    width: 50%;
+}
+
+.patchesContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.patchClassContainer > .body{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.patchClassTitle {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 10px 10px 10px 0;
+    background-color: var(--mainBgColor);
+    z-index: var(--levelTop);
+}
+
+.patchContainer {
+    margin: 0 5px 15px 10px;
+    -webkit-transition-timing-function: ease-in-out;
+         -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    transition: all 0.1s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+}
+
+.patchContainer > hr{
+    height: 0;
+    position: fixed;
+    border-top: 2px solid black;
+    -webkit-transform-origin: top left;
+        -ms-transform-origin: top left;
+            transform-origin: top left;
+    z-index: 3;
+}
+
+.patchCompareContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-left: -5px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    direction: ltr;
+}
+
+.scaleContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: hidden;
+}
+
+.scaleContainer > .gradCamSlider {
+    margin-left: -14px;
+}
+
+.noUi-target {
+    border: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    background: none !important;
+}
+
+.noUi-draggable {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.noUi-handle {
+    border-radius: 50% !important;
+    width: 20px !important;
+    height: 20px !important;
+    right: -1px !important;
+    top: -10px !important;
+}

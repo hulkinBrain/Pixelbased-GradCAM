@@ -1,0 +1,5 @@
+__pycache__
+dataset5/
+.idea
+*.csv
+venv/

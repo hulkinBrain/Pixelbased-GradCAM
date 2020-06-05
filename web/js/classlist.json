@@ -1,0 +1,200 @@
+{
+  "0": {
+    "id": 0,
+    "className": "background",
+    "rgb": [
+      0,
+      0,
+      0
+    ]
+  },
+  "1": {
+    "id": 1,
+    "className": "aeroplane",
+    "rgb": [
+      128,
+      0,
+      0
+    ]
+  },
+  "2": {
+    "id": 1,
+    "className": "bicycle",
+    "rgb": [
+      0,
+      128,
+      0
+    ]
+  },
+  "3": {
+    "id": 2,
+    "className": "bird",
+    "rgb": [
+      128,
+      128,
+      0
+    ]
+  },
+  "4": {
+    "id": 3,
+    "className": "boat",
+    "rgb": [
+      0,
+      0,
+      128
+    ]
+  },
+  "5": {
+    "id": 4,
+    "className": "bottle",
+    "rgb": [
+      128,
+      0,
+      128
+    ]
+  },
+  "6": {
+    "id": 5,
+    "className": "bus",
+    "rgb": [
+      0,
+      128,
+      128
+    ]
+  },
+  "7": {
+    "id": 6,
+    "className": "car",
+    "rgb": [
+      128,
+      128,
+      128
+    ]
+  },
+  "8": {
+    "id": 7,
+    "className": "cat",
+    "rgb": [
+      64,
+      0,
+      0
+    ]
+  },
+  "9": {
+    "id": 8,
+    "className": "chair",
+    "rgb": [
+      192,
+      0,
+      0
+    ]
+  },
+  "10": {
+    "id": 9,
+    "className": "cow",
+    "rgb": [
+      64,
+      128,
+      0
+    ]
+  },
+  "11": {
+    "id": 10,
+    "className": "diningTable",
+    "rgb": [
+      192,
+      128,
+      0
+    ]
+  },
+  "12": {
+    "id": 11,
+    "className": "dog",
+    "rgb": [
+      64,
+      0,
+      128
+    ]
+  },
+  "13": {
+    "id": 12,
+    "className": "horse",
+    "rgb": [
+      192,
+      0,
+      128
+    ]
+  },
+  "14": {
+    "id": 13,
+    "className": "motorbike",
+    "rgb": [
+      64,
+      128,
+      128
+    ]
+  },
+  "15": {
+    "id": 14,
+    "className": "person",
+    "rgb": [
+      192,
+      128,
+      128
+    ]
+  },
+  "16": {
+    "id": 15,
+    "className": "pottedPlant",
+    "rgb": [
+      0,
+      64,
+      0
+    ]
+  },
+  "17": {
+    "id": 16,
+    "className": "sheep",
+    "rgb": [
+      128,
+      64,
+      0
+    ]
+  },
+  "18": {
+    "id": 17,
+    "className": "sofa",
+    "rgb": [
+      0,
+      192,
+      0
+    ]
+  },
+  "19": {
+    "id": 18,
+    "className": "train",
+    "rgb": [
+      128,
+      192,
+      0
+    ]
+  },
+  "20": {
+    "id": 19,
+    "className": "tvMonitor",
+    "rgb": [
+      0,
+      64,
+      128
+    ]
+  },
+  "21": {
+    "id": 20,
+    "className": "outline",
+    "rgb": [
+      224,
+      224,
+      192
+    ]
+  }
+}
