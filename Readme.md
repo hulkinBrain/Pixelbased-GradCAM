@@ -1,3 +1,4 @@
+
 # Pixelwise GradCAM Visualisation of Semantic Segmented Images
 
 This tool aims to merge GradCAM and Semantic Segmentation visualization to gain a deeper understanding in how Deep learning models take decisions to segment objects in an image. Contrary to GradCAM visualisation of the whole image, pixel wise GradCAM is done to understand what pixels are responsible to decide the class value of pixel in focus in semantic segmented image.
@@ -6,13 +7,13 @@ This tool aims to merge GradCAM and Semantic Segmentation visualization to gain 
 Python 3 with numpy and opencv is required to run data augmentation script if data from backend is not available
 
 ## Data Augmentation
-Since currently the backend is not available, run the `augmentData.py` script to create augmented GradCAM pixels for each pixel in the image.  
+Since currently the backend is not available, Create a virtual environment using `requirements.txt` and then run the `augmentData.py` script to create augmented GradCAM pixels for each pixel in the image.  
 Run the following command in CMD:
 
-    >>> augmentData.py "path/to/image/image.jpg"
+    python augmentData.py "path/to/image/image.jpg"
         
 	[100% completed]
-    GradCAM data for [2007_000738] generated in [web/data/2007_000738/2007_000738.csv]
+    GradCAM data for [2007_000738] generated in [path/to/image/image.csv]
 
     
  It will output the csv file in 
