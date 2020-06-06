@@ -12,6 +12,28 @@ html {
     background-color: var(--mainBgColor) !important;
 }
 
+.tableTitleContainer {
+    /*border-bottom: 2px rgba(0, 255, 0, 0.5) solid;*/
+    margin-top: 50px;
+}
+
+.tableTitle {
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgba(0, 255, 0, 0.5);
+}
+
+.contentBody {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.codeBlock {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 .navbar {
     display: -webkit-box;
     display: -ms-flexbox;

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
         <title>Hello!</title>
@@ -34,12 +35,61 @@
                     <select>
                     </select>
                 </div>
+                <button class="button is-primary" onclick="toggleControlsModal()">Controls [C]</button>
                 <button class="button is-link is-light" onclick='toggleInterestingPoints()'>Toggle interesting points[Q]</button>
                 <button class="button is-success is-light" onclick='download(JSON.stringify(interestingJsonData));'>Save Interesting Patches[S]</button>
             </div>
         </div>
     </nav>
         <div class="masterContainer">
+            <div class="modal controlsModal">
+                <div class="modal-background"
+                     onclick='document.querySelector(".controlsModal").classList.remove("is-active")'></div>
+                <div class="modal-content" style="min-width: 600px; width: 50vw;">
+                    <section class="section box modalContentBox" style="min-width: 600px; width: 50vw;">
+                        <div class="container">
+                            <h1 class="title">Controls</h1>
+                            <section class="contentBody">
+                                <div class="tableContainer">
+                                    <table class="controlsTable table is-striped is-fullwidth">
+                                        <thead>
+                                        <tr>
+                                            <th>Keys</th>
+                                            <th>Description</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><span class="codeBlock">Left Click</span></td>
+                                            <td>Create patch</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="codeBlock">Double click</span></td>
+                                            <td>Adds/Removes the patch from the "Patch Comparison" container</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="codeBlock">Ctrl+LeftClick</span></td>
+                                            <td>Toggles the patch as an “Interesting Patch”</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="codeBlock">Ctrl+Alt+LeftClick</span></td>
+                                            <td>Removes interesting points (if exist)/patch</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="codeBlock">Shift+ScrollUp/Down</span></td>
+                                            <td>Changes opacity of Patch / Input image</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+                </div>
+                <button class="modal-close is-large"
+                        onclick='document.querySelector(".controlsModal").classList.remove("is-active")'
+                        aria-label="close"></button>
+            </div>
             <div class="block1">
                 <div class="fileSelectorMasterContainer">
                     <section class="fileSelectorContainer fileSelectorContainer1">
@@ -206,6 +256,12 @@
             </div>
 
         </div>
+        <script>
+            function toggleControlsModal() {
+				let controlsModal = document.querySelector(".controlsModal");
+				controlsModal.classList.add("is-active");
+			}
+        </script>
         <script>
             let interstingJsonFileLoaded = false;
             //Fetch classlist json
@@ -847,6 +903,16 @@
                 else if(e.key === "s") {
                     download(JSON.stringify(interestingJsonData));
                 }
+                // For modal
+                else if(e.key === "c") {
+					if(document.querySelector(".controlsModal").classList.contains("is-active")){
+						document.querySelector(".controlsModal").classList.remove("is-active");
+					}
+					else{
+						document.querySelector(".controlsModal").classList.add("is-active");
+						toggleControlsModal();
+					}
+				}
             };
 
             // To save interestingPoints into a file
