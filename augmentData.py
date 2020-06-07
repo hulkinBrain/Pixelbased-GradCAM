@@ -34,7 +34,7 @@ try:
     imgPathInput = sys.argv[1]
     # images = ["2007_000129", "2007_000033", "2007_000762"]
     imageName = os.path.split(imgPathInput)[1].rsplit(".", 1)[0]
-    outputCSVPathText = r"web/data/"+imageName+"/"
+    outputCSVPathText = os.path.split(imgPathInput)[0]+"/"
 
     # Create directory if it doesnt exist
     outputCSVPath = Path(outputCSVPathText).mkdir(parents=True, exist_ok=True)
@@ -51,7 +51,7 @@ try:
                 sys.stdout.write("\r["+str(int((i*img.shape[1]+j)/total_iterations*100)+1)+"% completed]")
                 sys.stdout.flush()
 
-    sys.stdout.write("\nGradCAM data for ["+imageName+"] generated in ["+outputCSVPathText+imageName+".csv]")
+    sys.stdout.write("\nGradCAM data for ["+imageName+"] generated in ["+outputCSVPathText+imageName+".csv]\n")
 except:
     e = sys.exc_info()[0]
-    print(e)
+    print("\nInvalid arguments\nUsage: python augmentData.py \"path/to/image.jpg\"")
