@@ -299,7 +299,6 @@
                 }
             };
             // Load image GradCAM pixel data from csv file
-            loadFile(pixelListUrl);
             function loadFile(fileOrUri) {
                 // overlay.style.display = "flex";
                 console.time("loadCSV");
@@ -348,8 +347,9 @@
             let imgData;
 
             // default rendering of canvas images
-            renderCanvasImage(default_ogImageSrc, canvas1);
-            renderCanvasImage(default_semsegImageSrc, canvas2);
+            // loadFile(pixelListUrl);
+            // renderCanvasImage(default_ogImageSrc, canvas1);
+            // renderCanvasImage(default_semsegImageSrc, canvas2);
 
             // Change canvas images When user uploads some image
             semsegImageInput.onchange = (e) => {
