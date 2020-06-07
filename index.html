@@ -6,16 +6,16 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/animate.min.css">
-        <link rel="stylesheet" href="css/bulma.min.css">
+        <link rel="stylesheet" href="web/css/index.css">
+        <link rel="stylesheet" href="web/css/animate.min.css">
+        <link rel="stylesheet" href="web/css/bulma.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="css/nouislider.min.css">
-        <script src="js/nouislider.min.js"></script>
+        <link rel="stylesheet" href="web/css/nouislider.min.css">
+        <script src="web/js/nouislider.min.js"></script>
 
 <!--        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>-->
-        <script src="js/lists.js"></script>
-        <script src="js/papaparse.js"></script>
+        <script src="web/js/lists.js"></script>
+        <script src="web/js/papaparse.js"></script>
 
     </head>
     <body>
@@ -264,9 +264,10 @@
         </script>
         <script>
             let interstingJsonFileLoaded = false;
+            let root = "web/";
             //Fetch classlist json
             let classlist = Object.values(classlistJson);
-            pixelListUrl = "data/2007_000033/2007_000033.csv";
+            pixelListUrl = `${root}data/2007_000033/2007_000033.csv`;
             let imageName = "2007_000033";
             let csvLocalInput = document.querySelector("#csvInput");
             // let ogImageLabel = document.querySelector(".ogImageInputLabel");
@@ -335,8 +336,8 @@
             }
 
             //Selectors
-            let default_ogImageSrc = "media/2007_000033.jpg";
-            let default_semsegImageSrc = "media/2007_000033.png";
+            let default_ogImageSrc = `${root}media/2007_000033.jpg`;
+            let default_semsegImageSrc = `${root}media/2007_000033.png`;
 
             // Canvas elements
             let canvas1 = document.querySelector("#canvas1");
@@ -584,7 +585,10 @@
                             hrLine.style.borderTop = "2px solid black";
                             patchWindow.style.borderColor = "black";
                             interestingPositions.delete(pos1D);
-                            interestingJsonData[imageName] = [...interestingPositions];
+                            if(interestingPositions.size === 0)
+                                delete interestingJsonData[imageName];
+                            else
+                                interestingJsonData[imageName] = [...interestingPositions];
                             deleteInterestingPoint(pos1D);
                         }
 
@@ -774,9 +778,10 @@
             }
 
             function loadInterestingPoints(isFileLoadedBefore=false) {
+                let root = "web/";
                 if(!isFileLoadedBefore) {
                     interstingJsonFileLoaded = true;    // Setting check as true so that file isnt loaded again till the page is not refreshed
-                    fetch(`data/interesting.json?${Math.round(Math.random()*100)}`)
+                    fetch(`${root}data/interesting.json?${Math.round(Math.random()*100)}`)
                     .then(response => {
                         if(!response.ok) {
                             throw new Error('File not present');
@@ -795,7 +800,7 @@
                                 patchCompareContainer.innerHTML = "";
                                 document.querySelector(".block2").style.display = "none";
                                 imageName = interestingImageEl.innerHTML;
-                                let path = `data/${imageName}/`;
+                                let path = `${root}data/${imageName}/`;
 
                                 let event = new Event('change');
                                 ogImageInput.src = path+`${imageName}.jpg`;
@@ -862,7 +867,10 @@
                 circleSvg.onclick = (e) => {
                     if(e.ctrlKey && e.altKey){
                         interestingPositions.delete(position1D);
-                        interestingJsonData[imageName] = [...interestingPositions];
+                        if(interestingPositions.size === 0)
+                                delete interestingJsonData[imageName];
+                            else
+                                interestingJsonData[imageName] = [...interestingPositions];
                         deleteInterestingPoint(position1D);
                     }
                     else {
